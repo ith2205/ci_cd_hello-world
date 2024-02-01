@@ -1,0 +1,21 @@
+name: cicd_test
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main 
+
+jobs: 
+  "print_hello_world":
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v4.1.1 
+
+    
+    - name: print file content
+      run: cat cicd_test.txt
+
+      

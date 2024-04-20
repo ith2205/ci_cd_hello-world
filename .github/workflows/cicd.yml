@@ -25,7 +25,7 @@ jobs:
 
     
     - name: print file content
-      if: inputs.environement == 'dev'
+      # if: inputs.environement == 'dev'
       run: | 
         echo 'env:' inputs.environment
         cat cicd_test.txt

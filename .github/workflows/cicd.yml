@@ -25,6 +25,7 @@ jobs:
 
     
     - name: print file content
+      if: input.environement == 'dev'
       run: cat cicd_test.txt
 
       

@@ -18,14 +18,12 @@ on:
 jobs: 
   print_hello_world:
     runs-on: ubuntu-latest
-
     steps:
     - name: checkout code
       uses: actions/checkout@v4.1.1 
 
-    
     - name: print file content
-      # if: inputs.environement == 'dev'
+      if:  ${{ inputs.environment }} == 'dev'
       run: | 
         echo 'env:' ${{ inputs.environment }}
         cat cicd_test.txt
